@@ -12,3 +12,12 @@ function foo() {
     console.log(bar);
 }
 foo();
+
+
+try {
+    return foo();
+} catch (e) {
+    return bar();
+} finally {
+    return finalFunc(); // BAD_FINALLY_CONTROL_FLOW alarm because this will overwirte try-catch return value.
+}
