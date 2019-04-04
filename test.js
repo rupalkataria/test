@@ -22,10 +22,4 @@ try {
     return finalFunc(); // BAD_FINALLY_CONTROL_FLOW alarm because this will overwirte try-catch return value.
 }
 
-var arr = [1, 2, 3];
-if (x < 0) {
-    arr[x] = 3; // ARRAY_INDEX_NEGATIVE alarm: x is negative but is used as array index.
-}
-if (x <= 0) {
-    if (x) arr[x] = 3; // ARRAY_INDEX_NEGATIVE alarm: x is negative but is used as array index.
-}
+
